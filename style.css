@@ -1,0 +1,313 @@
+:root {
+    --orange-color: #FF8C05;
+    --light-orange-color: #FFA500;
+    --blue-color: #1C18F0;
+    --light-blue-color: #42B2FB;
+    --green-color: #1CC900;
+    --red-color: #FF0000;
+    --black-color: #000000;
+    --purple: #605DEC;
+    --white-color: #FFFFFF;
+    --grey-color: #C4C4C4;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif 
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+/* Buttons */
+
+.btn {
+    padding: 30px 78px;
+    border-radius: 4px;
+    color: #000000;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn.grey {
+background: var(--grey-color);
+}
+
+.btn.search {
+    background: var(--light-orange-color);
+}
+
+.btn.eyeglass-icon::before {
+    content: url(images/search.png);
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+}
+
+.btn.purple {
+    background: var(--light-orange-color);
+}
+
+/* Header */
+
+header {
+    background: #1C18F0;
+    height: 19vh;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: #FF8C05;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #FF8C05;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Hero Section */
+
+.hero-section {
+    display:flex;
+    height: 30vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-section .left h1 {
+    color: #1C18F0;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.hero-section .left p {
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.hero-section .left .btn {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.hero-section .right {
+    color: #1C18F0;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    left: 100px;
+}
+
+.hero-section .right img {
+    width: 20px;
+height: 20px;
+flex-shrink: 0;
+background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+
+/* Calendar */
+
+
+.container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .calendar {
+    width: 1200px;
+    height: 1000px;
+    color: #000000;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2);
+    font-family: "Inter", sans-serif;
+    
+}
+
+.container .digital_clock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.digital_clock:hover {
+    background: linear-gradient(to top, #1C18F0 0%, #1513a8 100%);
+}
+.digital_clock .time {
+    font-size: 50px;
+    color: #fff;
+}
+
+.digital_clock .time .format {
+    font-size: 25px;
+}
+
+.calendar .month {
+    width: 100%;
+    background-color: #1C18F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 84px 30px 40px 30px;
+    text-align: center;
+}
+
+.month h2 {
+    font-size: 32px;
+    margin-top: 25px;
+}
+.month p {
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+.month .arrow {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: #3a37d4;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.month .arrow:hover {
+    background-color: #FFA500;
+}
+
+.container .week {
+    display: flex;
+    background-color: #1513a8;
+    color: #fff;
+}
+
+.week div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0px;
+    transition: 0.4s;
+}
+
+.week .active {
+    background-color: #FFA500;
+}
+
+.week div:hover {
+    background-color: #FFA500;
+}
+
+.container .dates {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.dates .today {
+    background-color: #FFA500;
+    color: #1513a8;
+}
+
+.dates .today:hover {
+    background-color: #FF8C05;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dates div {
+    width: 167px;
+    height: 118px;
+    margin: 2px;
+    margin-top: 1.7px;
+    text-align: center;
+    line-height: 100px;
+    border: 3px solid #e9e9e9;
+}
+
+.dates div:hover:not(.today) {
+    border: 3px dashed #111;
+    background-color: #f0f0f0;
+    color: #1C18F0;
+    font-size: 600;
+    cursor: pointer;
+    -webkit-box-reflect: below 4px linear-gradient(transparent, #0000004d);
+}
+
+.dates div:nth-child(n+36):hover {
+    -webkit-box-reflect: above 4px linear-gradient(transparent, #0000004d);
+}
+
+
+/* .calendar .dates div:nth-child(n+43) {
+    border: none !important;
+    cursor: auto !important;
+    background: none !important;
+} */
+
+
+.dates .prev, .dates .next {
+    opacity: 0.5;
+}
+
+.dates .prev:hover,
+.dates .next:hover {
+    opacity: 1;
+}
+
+/* Footer */
+
+.footnote {
+    background: #1C18F0;
+    height: 50vh;
+    width: 100%;
+    z-index: 1;
+}
